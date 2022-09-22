@@ -1,0 +1,113 @@
+[
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 1,
+        "fields": {
+            "watched": "True",
+            "title": "Titanic",
+            "rating": "5",
+            "release_date": "1997",
+            "review":"Visually, the movie is undeniably impressive; there's no question where all the money went. As love stories go, this one is solid, but it's a long way short of special."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 2,
+        "fields": {
+            "watched": "False",
+            "title": "Forrest Gump",
+            "rating": "4",
+            "release_date": "1994",
+            "review": "Forrest Gump remains an American staple thanks to Tom Hanks' affecting performance and Robert Zemeckis' ability to canvass history with a galavanting story about patriotic perseverance and optimism."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 3,
+        "fields": {
+            "watched": "True",
+            "title": "Back to the Future",
+            "rating": "5",
+            "release_date": "1985",
+            "review": "The weightlessness of Back to the Future is part of its singular charm. Marty McFly and Doc Brown's time-traveling adventure is one of our great movies because of the way it loves its characters, its story and the infinite possibilities of its universe."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 4,
+        "fields": {
+            "watched": "False",
+            "title": "Jurassic Park",
+            "rating": "4",
+            "release_date": "1993",
+            "review": "Jurassic Park has staying power because it is not afraid to be about something while also maintaining its sense of the spectacular, that is, the sensory aspects of drama and filmmaking."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 5,
+        "fields": {
+            "watched": "True",
+            "title": "The Avengers",
+            "rating": "4",
+            "release_date": "2012",
+            "review": "The Avengers, as a movie, can be best described as one of the most prominent examples of a crowd pleaser."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 6,
+        "fields": {
+            "watched": "True",
+            "title": "Avengers: Infinity War",
+            "rating": "4",
+            "release_date": "2018",
+            "review": "Infinity War is all about balance, in many different respects. Balance and tone, both of which, for a film with such ambition and size, are remarkable in how well they are executed."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 7,
+        "fields": {
+            "watched": "True",
+            "title": "Avengers: Endgame",
+            "rating": "5",
+            "release_date": "2019",
+            "review": "Avengers: Endgame is not just a culmination of the last eleven years of the Marvel Studios cinematic saga but also a celebration of everything people have come to love about these characters."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 8,
+        "fields": {
+            "watched": "True",
+            "title": "Toy Story 3",
+            "rating": "5",
+            "release_date": "2010",
+            "review": "It takes a kind of genius to combine a children's movie for grown-ups and a grown-up's movie for children in one glittering digimated package, yet the folks at Pixar have done it time and again."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 9,
+        "fields": {
+            "watched": "True",
+            "title": "Finding Nemo",
+            "rating": "5",
+            "release_date": "2003",
+            "review": "Finding Nemo is distributed by Disney, and it has what the most heartfelt Disney animated features used to have: rapturous imagery matched with real wit."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 10,
+        "fields": {
+            "watched": "True",
+            "title": "Cars",
+            "rating": "5",
+            "release_date": "2006",
+            "review": "The movie's Route 66 mythology, coupled with the presence of Paul Newman in what would turn out to be his final theatrical feature, lends it a nostalgic, bittersweet tinge."
+        }
+    }
+    
+]
