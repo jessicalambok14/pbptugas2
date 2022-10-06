@@ -2,24 +2,35 @@
 
 {% block meta %}
 <title>Create Task</title>
-{% endblock meta %}
+<style>
 
+    .task{
+        margin-left: 500px;
+        margin-right: 600px;
+    }
+
+</style>
+{% endblock meta %}
+    
 {% block content %}  
 
-<div class = "login">
+<div class = "task">
     
-    <h1>Create Task</h1>  
+    <h1 style="text-align:center">Create Task</h1>  
+        <div style="text-align:center"> 
 
-        <form method="POST" >  
-            {% csrf_token %}  
-            <table>  
-                {{ form.as_table }}  
-                <tr>  
-                    <td></td>
-                    <td class="btn btn-outline-dark"> <input type="submit" name="submit" value="Tambah task"/></td>  
-                </tr>  
-            </table>  
-        </form>
+            <form method="POST" >  
+                {% csrf_token %}  
+                
+                <table class="table table-red">  
+                    {{ form.as_table }}  
+                    <tr>  
+                        <td></td>
+                        <td > <input class="btn btn-outline-danger" type="submit" name="submit" value="Tambah task"/></td>  
+                    </tr>  
+                </table>  
+            </form>
+        </div>
 
     {% if messages %}  
         <ul>   
