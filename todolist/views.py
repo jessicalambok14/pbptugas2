@@ -24,7 +24,6 @@ def show_todolist(request):
     context = {
         'list_data_task': data_todolist,
         # 'nama': 'Jessica Lambok',
-        'last_login': request.COOKIES['last_login'],
     }
     return render(request, "todolist.html", context)
 
@@ -62,17 +61,43 @@ def logout_user(request):
     response.delete_cookie('last_login')
     return response
 
+@login_required(login_url='/todolist/login/')
 def create_task(request):
-    form = TaskForm()
+    if request.method == 'POST':
+        task = Task()
+        task.user = request.user
+        task.title = request.POST.get('title')
+        task.description = request.POST.get('description')
+        task.save()
+        return redirect('todolist:show_todolist')
 
-    if request.method == "POST":
-        form = TaskForm(request.POST)
-        if form.is_valid():
-            new_form = form.save(commit=False)
-            new_form.user = request.user
-            new_form.save()
-            messages.success(request, 'Task telah berhasil dibuat!')
-            return redirect('todolist:show_todolist')
+    return render(request, 'createtask.html')
 
-    context = {'form': form}
-    return render(request, 'create-task.html', context)
+@login_required(login_url='/todolist/login/')
+def show_json(request):
+    orang = request.user
+    dataTask = Task.objects.all().filter(user = orang)
+    return HttpResponse(serializers.serialize("json", dataTask), content_type="application/json")
+
+def add_task(request):
+    if request.method == 'POST':
+        task = Task()
+        task.user = request.user
+        task.title = request.POST.get('title')
+        task.description = request.POST.get('description')
+        task.save()    
+    return redirect('todolist:show_todolist')
+
+def delete(request, pk):
+    task = Task.objects.get(pk=pk)
+    task.delete()
+    return redirect('todolist:show_todolist')
+
+def update_task(request, pk):
+    task = Task.objects.get(pk=pk)
+    if (task.is_finished == True):
+        task.is_finished = False
+    else:
+        task.is_finished = True
+    task.save()
+    return redirect('todolist:show_todolist')
