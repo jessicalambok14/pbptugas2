@@ -8,27 +8,39 @@
 
 <div class = "login">
 
-    <h1>Login</h1>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <h2 class="text-center text-dark mt-5">Login Form</h2>
+            <div class="text-center mb-5 text-dark">Made with bootstrap</div>
+            <div class="card my-5">
+    
+                <form method="POST" action="" class="card-body cardbody-color p-lg-5">
+                {% csrf_token %}
 
-    <form method="POST" action="">
-        {% csrf_token %}
-        <table>
-            <tr>
-                <td>Username: </td>
-                <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
-            </tr>
-                    
-            <tr>
-                <td>Password: </td>
-                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td><input class="btn btn-outline-dark" type="submit" value="Login"></td>
-            </tr>
-        </table>
-    </form>
+                <div class="text-center">
+                  <img src="https://cdn.pixabay.com/photo/2016/03/31/19/56/avatar-1295397__340.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                    width="200px" alt="profile">
+                </div>
+    
+                <div class="mb-3">
+                  <input type="text" name="username" placeholder="Username" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <input type="password" name="password" placeholder="Password" class="form-control">
+                </div>
+                
+                    <button class="btn btn-color px-5 mb-5 w-100" type="submit" value="Login">Login</button>
+                
+                <div class="form-text text-center mb-5 text-dark">Not
+                  Registered? <a href="{% url 'todolist:register' %}"> Create an Account</a>
+                </div>
+              </form>
+            </div>
+    
+          </div>
+        </div>
+      </div>
 
     {% if messages %}
         <ul>
@@ -38,8 +50,8 @@
         </ul>
     {% endif %}     
         
-    Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
 
 </div>
 
 {% endblock content %}
+
