@@ -1,6 +1,6 @@
 # Tugas 6
 Pada tugas ini, kita mengimplementasikan Ajax pada Django <br/>
-Berikut link aplikasi website, [HerokuApp Pages](https://tugas2-pbp-safa.herokuapp.com/).
+Berikut link aplikasi website, [HerokuApp Pages](https://pbptugas2jessica.herokuapp.com/).
 
 ## Perbedaan antara *Asynchronous Programming* dengan *Synchronous Programming*
 Untuk proses *synchronous*, setiap fungsi dijalankan berurutan. Untuk dapat menjalankan fungsi berikutnya, harus menunggu fungsi sebelumnya selesai (*blocking*). 
